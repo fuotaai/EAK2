@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0030)http://kto.web.elte.hu/nb.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta name="generator" content="pandoc">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="programozási-feladat">Programozási feladat</h1>
+<p>Adott egy forráskód, melyet párhuzamosítani kell. A forráskód egy n-test szimulációt valósít meg - szekvenciálisan. A forráskód az alábbi két fájlban található.</p>
+<ul>
+<li><a href="http://kto.web.elte.hu/NBody.java" class="uri">NBody.java</a></li>
+<li><a href="http://kto.web.elte.hu/Show.java" class="uri">Show.java</a></li>
+</ul>
+<h2 id="n-body">N-body</h2>
+<p>Az n-test szimuláció lényege, hogy <span class="math inline"><em>n</em></span> test egymásra gyakorolt gravitációs vonzásának hatását közelítő módszerrel határozza meg. (Az analitikus megoldás csak néhány speciális esetre ismert, főleg kis <span class="math inline"><em>n</em></span>-ekre.) A testek egy három dimenziós térben mozognak a Newton-törvényeknek megfelelően. Minden test hat minden testre: az erő (köbösen, fordítottan) arányos a testek távolságával, és persze arányos a testek tömegével. Az erő pillanatnyi értékéből a gyorsulás pillanatnyi értéke meghatározható. Ez a pillanatnyi sebességváltozást adja. hasonlóan, a pillanatnyi sebesség a pillanatnyi helyváltozást adja meg. (A sebesség a test pozíciójának, mint időbeli függvénynek a deriváltja, a gyorsulás pedig a sebesség időbeli deriváltja.) Mivel numerikus közelítő megoldást fogunk alkalmazni, az időt felbontjuk rövid szeletekre, és ezekben a szeletekben konstansnak tekintjük az erőt, és így a gyorsulást (Euler-módszer).</p>
+<p>Mi is van a kapott forráskódban? A <code>Vector</code> osztály térbeli vektoriális mennyiséget ábrázol: ez lehet térbeli pozíció, lehet sebességvektor, vagy gyorsulásvektor. Az <code>euler</code> műveletével egy paraméterként kapott <code>dt</code> idő elteltét az Euler-módszer szerint közelítjük, azaz a (szintén paraméterként kapott) deriváltat konstansként felfogva az adott időszeletben egy lineáris változtatást eszközlünk. A <code>Body</code> osztály szintén egy egyszerű adatszerkezet, mely egy test adatait tárolja: tömeg, térbeli pozíció, pillanatnyi sebesség.</p>
+<p>A lényeg az <code>NBody</code> osztályban van. Az <code>acceleration</code> metódussal kiszámítjuk, hogy egy testre milyen gyorsulás jön ki az összes többi test által kifejtett gravitációs vonzóerő hatására. Ezzel a gyorsulással korrigáljuk a test sebességét, a sebességgel pedig a térbeli pozíciót. Kísérletezni az egyszerűsített Naprendszerrel, illetve a véletlen értékekkel feltöltött <code>randomSystem</code>-mel lehet. A főprogram parancssori argumentumban várja, hogy hány testből álló véletlen rendszert hozzon létre, és hogy hány iterációs lépést hajtson végre a szimuláció. A mért időt kiírja a szabványos kimenetre.</p>
+<pre><code>java NBody 3000 100</code></pre>
+<p>Talán könnyebb megérteni, hogy a rendszer hogyan működik, ha megtekintjük a mellékelt GUI-s főprogramot is, mely az egyszerűsített Naprendszert futtatja.</p>
+<pre><code>java Show</code></pre>
+<h3 id="alapfeladat">Alapfeladat</h3>
+<p>Készítsd el a párhuzamosított implementációt a (végig kisbetűvel írt) Neptun-kódoddal megegyező nevű csomagban. Beküldeni egy olyan zip fájlt kell, amely a forráskódot tartalmazzza a csomagnak megfelelő könyvtárban.</p>
+<h3 id="extra-feladat">Extra feladat</h3>
+<p>Van egy konkurencia-hiba a GUI-s programban. Találd meg, javítsd ki!</p>
+
+
+</body></html>

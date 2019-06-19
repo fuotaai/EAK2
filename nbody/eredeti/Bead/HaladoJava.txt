@@ -1,0 +1,26 @@
+Javára ezt nézegetem:
+https://docs.google.com/document/d/1zS7sAeQzSmJDqSA4RdAj8WNeLUw8fOMuMisXxfnX8nI/edit
+
+meg tavalyi 2 vizsgáról kérdéseket:
+1:
+- type erasure vs. reification?
+- custom vs. default class loader
+- Mi a funkcionális interfész?
+- mi a javap?
+- PECS elv
+- shallow vs deep equality
+- mire jó a Method osztály a reflectionok között?
+- miért használható együtt a lambda és a stream?
+
+2:
+- Mire jó a ResourceBundle?
+- Különbség a .class, .getClass() és Class.forName() között
+- Mi a jvisualvm?
+- Mi a @Retention és @Target?
+- Mikor helyettesíthetõ a névtelen osztály lambdával?
+- Build tool és dependency manager micsodák?
+- Milyen lambdát vár a map.replaceAll függvénye?
+- A doubleök másképp kerülnek be a verembe mint a többi primitív típus, miért van ez és mikor van jelentõsége?
+
+meg Kitlei honlapját:
+http://kitlei.web.elte.hu/segedanyagok/foliak/halado-java/halado-java-ea.html

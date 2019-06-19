@@ -1,0 +1,3 @@
+4
+Rbt1;Product0,76;Product1,6_Rbt2;Product0,90;Product2,10;Product3,2_Rbt3;Product0,85;Product2,5;Product4,1
+PHASE1;Product1,80_PHASE2;Product0,8;Product2,33_PHASE3;Product2,5;Product3,10_PHASE4;Product4,5
